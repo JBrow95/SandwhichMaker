@@ -4,7 +4,7 @@ def bread
     use_bpm 75
     
     with_fx :reverb, mix: 0.5 do
-      sample :vinyl_hiss, amp: 3
+      sample :vinyl_hiss, amp: 2
     end
     sleep 0.5
   end
@@ -18,24 +18,30 @@ def veggies
 end
 
 def meat
-  sample :loop_mika, amp: 3
+  sample :loop_mika, amp: 2
 end
 
-def mayo
-  use_synth :fm
-  
-  play 69
-  sleep 0.5
-  play 62
-  sleep 0.5
-  play 58
-  sleep 3
-  play 58
-  sleep 0.5
-  play 60
-  sleep 0.5
-  play 53
-  sleep 1
+def mayo(cut)
+  if cut >= 5
+    sample :loop_electric
+  else
+    use_synth :fm
+    
+    play 69
+    sleep 0.5
+    play 62
+    sleep 0.5
+    play 58
+    sleep 3
+    play 58
+    sleep 0.5
+    play 60
+    sleep 0.5
+    play 53
+    sleep 1
+    
+    mayo(cut + 1)
+  end
 end
 
 live_loop :chef do
@@ -43,7 +49,7 @@ live_loop :chef do
   bread
   veggies
   meat
-  mayo
+  mayo(1)
 end
 
 live_loop :chefcut do
@@ -51,9 +57,11 @@ live_loop :chefcut do
   bread
   veggies
   meat
-  mayo
+  mayo(10)
 end
 
 live_loop :tick do
   sleep 1
 end
+
+
