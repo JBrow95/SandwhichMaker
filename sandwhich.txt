@@ -6,12 +6,12 @@ def bread
     with_fx :reverb, mix: 0.5 do
       sample :vinyl_hiss, amp: 3
     end
-    sleep 1
+    sleep 0.5
   end
 end
 
 def veggies
-  notes = sample :loop_mehackit2, rate: -1
+  notes = sample :loop_mehackit2, rate: -0.5
   
   puts notes
   sleep 1
@@ -28,7 +28,13 @@ def mayo
   sleep 0.5
   play 62
   sleep 0.5
+  play 58
+  sleep 2
+  play 58
+  sleep 0.5
   play 60
+  sleep 0.5
+  play 53
   sleep 1
 end
 
