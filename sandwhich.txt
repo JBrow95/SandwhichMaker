@@ -10,3 +10,10 @@ def bread
   end
 end
 
+def veggies
+  notes = sample :loop_mehackit2, rate: -1
+  
+  puts notes
+  sleep 1
+end
+
