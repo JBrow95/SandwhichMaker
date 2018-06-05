@@ -17,3 +17,8 @@ def veggies
   sleep 1
 end
 
+def meat
+  sample :perc_snap
+  sleep 1
+end
+
