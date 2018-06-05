@@ -23,12 +23,13 @@ end
 
 def mayo
   use_synth :fm
+  
   play 69
   sleep 0.5
   play 62
   sleep 0.5
   play 58
-  sleep 2
+  sleep 3
   play 58
   sleep 0.5
   play 60
@@ -38,8 +39,21 @@ def mayo
 end
 
 live_loop :chef do
+  sync :tick
   bread
   veggies
   meat
   mayo
+end
+
+live_loop :chefcut do
+  sync :tick
+  bread
+  veggies
+  meat
+  mayo
+end
+
+live_loop :tick do
+  sleep 1
 end
