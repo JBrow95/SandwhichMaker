@@ -32,3 +32,9 @@ def mayo
   sleep 1
 end
 
+live_loop :chef do
+  bread
+  veggies
+  meat
+  mayo
+end
