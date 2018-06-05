@@ -1,7 +1,7 @@
 #Lets Make A Sandwhich
 def bread
   live_loop :beat do
-    use_bpm 50
+    use_bpm 75
     
     with_fx :reverb, mix: 0.5 do
       sample :vinyl_hiss, amp: 3
@@ -18,8 +18,7 @@ def veggies
 end
 
 def meat
-  sample :perc_snap
-  sleep 1
+  sample :loop_mika, amp: 3
 end
 
 def mayo
