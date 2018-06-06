@@ -1,4 +1,5 @@
 #Lets Make A Sandwhich
+
 def bread
   live_loop :beat do
     use_bpm 75
@@ -50,6 +51,7 @@ live_loop :chef do
   veggies
   meat
   mayo(1)
+  eat
 end
 
 live_loop :chefcut do
@@ -58,6 +60,7 @@ live_loop :chefcut do
   veggies
   meat
   mayo(3)
+  eat
 end
 
 live_loop :tick do
