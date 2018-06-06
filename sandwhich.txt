@@ -64,3 +64,8 @@ live_loop :tick do
   sleep 1
 end
 
+def eat
+  play choose([veggies, meat])
+end
+
+
